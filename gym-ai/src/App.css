@@ -84,9 +84,41 @@ button.link-button {
 
 button.link-button:hover,
 button.link-button:focus {
-text-decoration: none;
-/* background-color: #114560; */
-background-color: rgba(0,0,0,0.1);
+  text-decoration: none;
+  /* background-color: #114560; */
+  background-color: rgba(0,0,0,0.1);
+}
+
+a#sidenav-button {
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  background-color: #26a69a;
+  border-radius: 50%;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+button.sidenav-link-button {
+  background-color: transparent;
+  cursor: pointer;
+  color: rgba(0,0,0,0.87);
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 32px;
 }
 
 video {
