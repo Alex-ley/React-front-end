@@ -49,6 +49,14 @@ class SignedInLinks extends Component {
             inDuration: 250
         });
     }
+  componentWillUnmount(){
+    var sidenav_overlay = document.querySelector('.sidenav-overlay');
+    var drag_target = document.querySelector('.drag-target');
+    if (sidenav_overlay) {
+      sidenav_overlay.parentNode.removeChild(sidenav_overlay);
+      drag_target.parentNode.removeChild(drag_target);
+    }
+  }
   render(){
     const { className } = this.props;
     const id = className === "sidenav" ? "mobile-sidenav" : "main-nav";
@@ -75,6 +83,14 @@ class SignedOutLinks extends Component {
             edge: "left",
             inDuration: 250
         });
+    }
+    componentWillUnmount(){
+      var sidenav_overlay = document.querySelector('.sidenav-overlay');
+      var drag_target = document.querySelector('.drag-target');
+      if (sidenav_overlay) {
+        sidenav_overlay.parentNode.removeChild(sidenav_overlay);
+        drag_target.parentNode.removeChild(drag_target);
+      }
     }
   render(){
     const { className } = this.props;
